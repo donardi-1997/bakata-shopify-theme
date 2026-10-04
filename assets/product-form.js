@@ -466,7 +466,7 @@ class ProductFormComponent extends Component {
         if (response.status) {
           this.dispatchEvent(
             new CartErrorEvent({
-              error: response.message || 'Add to cart failed',
+              error: response.message || 'No se pudo agregar al carrito',
               code: 'INVALID',
               detail: {
                 description: response.description,
@@ -571,7 +571,7 @@ class ProductFormComponent extends Component {
 
         this.dispatchEvent(
           new CartErrorEvent({
-            error: error?.message || 'Network error during add to cart',
+            error: error?.message || 'Error de red al agregar al carrito',
             code: 'SERVICE_UNAVAILABLE',
           })
         );
@@ -635,7 +635,7 @@ class ProductFormComponent extends Component {
         if (response.status) {
           this.dispatchEvent(
             new CartErrorEvent({
-              error: response.message || 'Add to cart failed',
+              error: response.message || 'No se pudo agregar al carrito',
               code: 'INVALID',
               detail: {
                 description: response.description,
@@ -715,7 +715,7 @@ class ProductFormComponent extends Component {
 
         this.dispatchEvent(
           new CartErrorEvent({
-            error: error?.message || 'Network error during add to cart',
+            error: error?.message || 'Error de red al agregar al carrito',
             code: 'SERVICE_UNAVAILABLE',
           })
         );
