@@ -1,0 +1,107 @@
+{% comment %}
+  Bakatá editorial marquee. Decorative copy only; motion is disabled for reduced-motion users.
+{% endcomment %}
+
+<section
+  class="bakata-marquee"
+  aria-label="Valores de Bakatá"
+  style="
+    --bm-bg: {{ section.settings.background_color }};
+    --bm-text: {{ section.settings.text_color }};
+    --bm-dot: {{ section.settings.accent_color }};
+  "
+>
+  <div class="bakata-marquee__viewport">
+    <div class="bakata-marquee__track">
+      {% for repeat in (1..2) %}
+        <div class="bakata-marquee__set" {% if repeat == 2 %}aria-hidden="true"{% endif %}>
+          {% for index in (1..4) %}
+            {% liquid
+              assign item_key = 'item_' | append: index
+              assign item = section.settings[item_key]
+            %}
+            {% if item != blank %}
+              <span class="bakata-marquee__item">{{ item | escape }}</span>
+              <span class="bakata-marquee__dot" aria-hidden="true"></span>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endfor %}
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .bakata-marquee {
+    overflow: hidden;
+    border-block: 1px solid color-mix(in srgb, var(--bm-text) 14%, transparent);
+    background: var(--bm-bg);
+    color: var(--bm-text);
+  }
+
+  .bakata-marquee__viewport {
+    overflow: hidden;
+    padding-block: 15px;
+  }
+
+  .bakata-marquee__track {
+    width: max-content;
+    display: flex;
+    animation: bakata-marquee 26s linear infinite;
+  }
+
+  .bakata-marquee__set {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+  }
+
+  .bakata-marquee__item {
+    padding-inline: clamp(18px, 2.4vw, 38px);
+    font-size: clamp(0.78rem, 1vw, 0.9rem);
+    font-weight: 760;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    white-space: nowrap;
+  }
+
+  .bakata-marquee__dot {
+    width: 5px;
+    height: 5px;
+    flex: 0 0 5px;
+    border-radius: 50%;
+    background: var(--bm-dot);
+  }
+
+  @keyframes bakata-marquee {
+    to { transform: translateX(-50%); }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .bakata-marquee__track {
+      animation: none;
+    }
+
+    .bakata-marquee__set[aria-hidden='true'] {
+      display: none;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Bakatá - Marquee",
+  "settings": [
+    { "type": "text", "id": "item_1", "label": "Texto 1", "default": "Selección útil" },
+    { "type": "text", "id": "item_2", "label": "Texto 2", "default": "Compra clara" },
+    { "type": "text", "id": "item_3", "label": "Texto 3", "default": "Soporte cercano" },
+    { "type": "text", "id": "item_4", "label": "Texto 4", "default": "Hecho para Colombia" },
+    { "type": "color", "id": "background_color", "label": "Fondo", "default": "#FFF9F1" },
+    { "type": "color", "id": "text_color", "label": "Texto", "default": "#17352B" },
+    { "type": "color", "id": "accent_color", "label": "Acento", "default": "#A55334" }
+  ],
+  "presets": [
+    { "name": "Bakatá - Marquee" }
+  ]
+}
+{% endschema %}
