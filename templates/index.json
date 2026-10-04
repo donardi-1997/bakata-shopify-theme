@@ -202,13 +202,13 @@
           "name": "t:names.product_card",
           "static": true,
           "settings": {
-            "product_card_gap": 4,
+            "product_card_gap": 8,
             "border": "none",
             "border_width": 1,
             "border_opacity": 100,
-            "border_radius": 0,
+            "border_radius": 16,
             "padding-block-start": 0,
-            "padding-block-end": 0,
+            "padding-block-end": 8,
             "padding-inline-start": 0,
             "padding-inline-end": 0
           },
@@ -221,7 +221,7 @@
                 "border": "none",
                 "border_width": 1,
                 "border_opacity": 100,
-                "border_radius": 0,
+                "border_radius": 16,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
@@ -246,7 +246,7 @@
                 "background": false,
                 "background_color": "#00000026",
                 "corner_radius": 0,
-                "padding-block-start": 4,
+                "padding-block-start": 8,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
                 "padding-inline-end": 0
@@ -260,7 +260,7 @@
                 "show_sale_price_first": true,
                 "show_installments": false,
                 "show_tax_info": false,
-                "type_preset": "h6",
+                "type_preset": "h5",
                 "width": "100%",
                 "alignment": "left",
                 "font": "var(--font-body--family)",
@@ -292,21 +292,39 @@
         "columns": 4,
         "mobile_columns": "2",
         "mobile_card_size": "60cqw",
-        "columns_gap": 16,
-        "rows_gap": 32,
+        "columns_gap": 18,
+        "rows_gap": 36,
         "icons_style": "arrow",
         "icons_shape": "none",
         "section_width": "page-width",
         "horizontal_alignment": "flex-start",
-        "gap": 28,
+        "gap": 32,
         "background_color": "{{ settings.color_palette.background }}",
         "padding-block-start": 64,
         "padding-block-end": 72
+      }
+    },
+    "bakata_value_props": {
+      "type": "bakata-value-props",
+      "settings": {
+        "eyebrow": "Hecho para comprar sin vueltas",
+        "heading": "Menos ruido. Más cosas útiles.",
+        "description": "Bakatá selecciona productos prácticos y construye una experiencia de compra clara para Colombia.",
+        "item_1_title": "Selección útil",
+        "item_1_text": "Priorizamos productos que resuelven algo real y se entienden rápido.",
+        "item_2_title": "Compra clara",
+        "item_2_text": "Información simple, precios visibles y una navegación sin fricción.",
+        "item_3_title": "Soporte cercano",
+        "item_3_text": "Si tienes una duda antes o después de comprar, queremos que sea fácil resolverla.",
+        "background_color": "#F3E9DC",
+        "text_color": "#17352B",
+        "accent_color": "#A55334"
       }
     }
   },
   "order": [
     "hero_jVaWmY",
+    "bakata_value_props",
     "product_list_fa6P9H"
   ]
 }
