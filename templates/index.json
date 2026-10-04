@@ -18,8 +18,8 @@
           "settings": {
             "text": "<h1>Encuentra eso que hace tu día más fácil.</h1>",
             "text_color": "#FFF9F1",
-            "width": "fill",
-            "max_width": "medium",
+            "width": "100%",
+            "max_width": "normal",
             "alignment": "left",
             "type_preset": "h1",
             "font": "var(--font-heading--family)",
@@ -62,8 +62,8 @@
           "settings": {
             "text": "<p>Productos útiles, seleccionados para tu hogar y tu día a día. Compra en Colombia con una experiencia simple y clara.</p>",
             "text_color": "#FFF9F1",
-            "width": "fill",
-            "max_width": "medium",
+            "width": "100%",
+            "max_width": "narrow",
             "alignment": "left",
             "type_preset": "rte",
             "font": "var(--font-body--family)",
