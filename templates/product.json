@@ -233,7 +233,7 @@
                 "input_text_color": "{{ settings.color_palette.foreground }}",
                 "input_border_color": "{{ settings.color_palette.foreground }}",
                 "border_width": 1,
-                "border_radius": 12,
+                "border_radius": 14,
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
@@ -258,9 +258,9 @@
                   "static": true,
                   "settings": {
                     "style_class": "button",
-                    "custom_button_background": "{{ settings.color_palette.foreground }}",
-                    "custom_button_text": "{{ settings.color_palette.background }}",
-                    "custom_button_border": "{{ settings.color_palette.background }}"
+                    "custom_button_background": "#17352B",
+                    "custom_button_text": "#FFF9F1",
+                    "custom_button_border": "#17352B"
                   },
                   "blocks": {}
                 },
@@ -322,28 +322,6 @@
                 "padding-block-end": 12,
                 "padding-inline-start": 14,
                 "padding-inline-end": 14
-              },
-              "blocks": {}
-            },
-            "price_tVjtKg": {
-              "type": "price",
-              "settings": {
-                "show_sale_price_first": true,
-                "show_installments": false,
-                "show_tax_info": false,
-                "type_preset": "h4",
-                "width": "100%",
-                "alignment": "left",
-                "font": "var(--font-body--family)",
-                "font_size": "1rem",
-                "line_height": "normal",
-                "letter_spacing": "normal",
-                "case": "none",
-                "text_color": "",
-                "padding-block-start": 2,
-                "padding-block-end": 0,
-                "padding-inline-start": 0,
-                "padding-inline-end": 0
               },
               "blocks": {}
             }
