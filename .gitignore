@@ -1,0 +1,29 @@
+# Local environment and credentials
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.crt
+credentials.json
+
+# Dependencies and generated files
+node_modules/
+.shopify/
+.cache/
+dist/
+build/
+coverage/
+*.log
+*.tmp
+*.swp
+
+# OS/editor files
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+
+# Shopify local state
+.shopify-cli/
+shopify.theme.toml
