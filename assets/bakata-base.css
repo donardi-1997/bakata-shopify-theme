@@ -1,0 +1,12 @@
+html{scroll-behavior:smooth}
+body{-webkit-font-smoothing:antialiased;text-rendering:optimizeLegibility;background:var(--bk-cream-50)}
+::selection{background:var(--bk-yellow-500);color:var(--bk-green-900)}
+:where(a,button,input,select,textarea,summary):focus-visible{outline:2px solid var(--bk-terracotta-600);outline-offset:3px}
+button,.button,input,select,textarea{transition:border-color 160ms var(--bk-ease),box-shadow 160ms var(--bk-ease),background-color 160ms var(--bk-ease),color 160ms var(--bk-ease),transform 160ms var(--bk-ease)}
+.button:not(.button-unstyled):hover{transform:translateY(-1px)}
+input:not([type='checkbox']):not([type='radio']),select,textarea{min-height:48px}
+input:not([type='checkbox']):not([type='radio']):focus,select:focus,textarea:focus{box-shadow:0 0 0 3px rgb(165 83 52 / .10)}
+.bakata-hero__inner,.bakata-categories__inner,.bakata-value-props__inner,.bakata-home-cta__inner{width:min(100%,var(--bk-content-max));margin-inline:auto;padding-inline:clamp(28px,4.2vw,72px);box-sizing:border-box}
+@media(max-width:989px){.bakata-hero__inner,.bakata-categories__inner,.bakata-value-props__inner,.bakata-home-cta__inner{padding-inline:28px}}
+@media(max-width:749px){.bakata-hero__inner,.bakata-categories__inner,.bakata-value-props__inner,.bakata-home-cta__inner{padding-inline:20px}.page-width{--page-margin:18px}:where(button,.header-actions__action,.search-action,summary){min-width:44px;min-height:44px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
