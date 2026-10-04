@@ -4,22 +4,25 @@ Theme de Shopify versionado para el desarrollo frontend de Bakatá.
 
 ## Themes de Shopify
 
-- `Horizon` (`188889530592`): theme publicado actual. No debe modificarse desde este flujo.
-- `Bakata Development` (`188891726048`): theme no publicado para pruebas y previews.
+- `Horizon` (`188889530592`): theme publicado actual en producción. No se modifica directamente desde este flujo.
+- `bakata-shopify-theme/main` (`188891922656`): theme no publicado conectado a la rama `main`.
+- `bakata-shopify-theme/develop` (`188891988192`): theme no publicado conectado a la rama `develop`; es el entorno principal de desarrollo y preview.
+- `Bakata Development` (`188891726048`): theme no publicado independiente/auxiliar. No es el destino principal del flujo GitHub.
 
 ## Development workflow
 
 1. Trabajar en la rama `develop`.
-2. Ejecutar `git push origin develop`.
-3. Shopify debe actualizar el theme de desarrollo conectado a esa rama.
+2. Hacer commit y push a `develop`.
+3. Shopify sincroniza automáticamente los cambios con `bakata-shopify-theme/develop`.
 4. Revisar el preview del theme no publicado.
 5. Ejecutar `shopify theme check` antes de solicitar revisión.
 6. Crear un Pull Request de `develop` hacia `main`.
 7. Revisar y aprobar el Pull Request.
-8. Hacer merge a `main` después de la aprobación.
-9. Publicar manualmente en Shopify únicamente tras la validación final.
+8. Hacer merge a `main`.
+9. Shopify sincroniza `main` con `bakata-shopify-theme/main`.
+10. Publicar manualmente en Shopify únicamente tras la validación final.
 
-Ningún merge o push debe publicar automáticamente el theme de producción. `Horizon` permanece protegido como producción actual; `Bakata Development` es exclusivamente para pruebas.
+Ningún push o merge debe publicar automáticamente el theme de producción. `Horizon` permanece como producción hasta que se decida publicar manualmente el theme conectado a `main`.
 
 ## Shopify CLI
 
