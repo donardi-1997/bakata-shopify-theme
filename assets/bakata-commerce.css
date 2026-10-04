@@ -1,0 +1,32 @@
+.product-card__content{transition:transform 180ms var(--bk-ease),box-shadow 180ms var(--bk-ease)}
+.product-card img{transition:transform 360ms var(--bk-ease)}
+.product-card:hover img{transform:scale(1.02)}
+.product-card:hover .product-card__content{transform:translateY(-2px)}
+.product-grid__item .product-card{border-radius:var(--bk-radius-md);overflow:hidden}
+.product-grid__item .product-card__content{padding-top:10px}
+.product-grid__item .product-card__content :is(h3,h4,p){text-wrap:pretty}
+.product-grid-container .facets,.product-grid-container filters-form{border-radius:var(--bk-radius-pill)}
+.product-information{--bakata-pdp-gap:clamp(26px,4vw,56px)}
+.product-details>.group-block{box-shadow:var(--bk-shadow-sm)}
+.product-details h1{letter-spacing:-.035em;line-height:1.02}
+.product-details .button:not(.button-unstyled){min-height:54px;font-weight:700}
+.product-information .media-gallery img{border-radius:var(--bk-radius-md)}
+cart-drawer dialog,.cart-drawer__content{border-radius:var(--bk-radius-lg) 0 0 var(--bk-radius-lg)}
+.cart-drawer__summary{background:var(--bk-cream-50);border-top:1px solid var(--bk-border);box-shadow:0 -12px 28px rgb(23 53 43 / .08);mask-image:none}
+.cart__checkout-button{background:var(--bk-green-900);color:var(--bk-cream-50);border-color:var(--bk-green-900);border-radius:var(--bk-radius-pill);min-height:54px;font-weight:700}
+.cart__checkout-button:hover{background:var(--bk-green-800)}
+[data-template^='collection'] .section h1,[data-template^='search'] .section h1{font-family:var(--font-heading--family);letter-spacing:-.035em}
+[data-template='cart'] .cart-summary{border-radius:var(--bk-radius-md)}
+@media(max-width:749px){.product-details>.group-block{box-shadow:none;border-radius:var(--bk-radius-md)}cart-drawer dialog,.cart-drawer__content{border-radius:0}.cart-drawer__summary{padding-bottom:max(20px,env(safe-area-inset-bottom))}}
+.product-grid__item .product-card__content{padding-inline:2px}
+.product-grid__item .product-card__content .price{font-weight:700}
+.product-grid__item .product-card__content a{text-underline-offset:3px}
+@media(max-width:749px){
+  .product-grid-container{padding-inline:18px}
+  .product-grid__item .product-card{border-radius:14px}
+  .product-grid__item .product-card__content{padding-top:8px}
+  .product-information{padding-inline:18px}
+}
+@media(max-width:389px){
+  .product-grid-container{padding-inline:14px}
+}

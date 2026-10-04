@@ -550,8 +550,7 @@
 
     z-index: var(--layer-overlay);
 
-    &[transparent='not-sticky'][data-sticky-state='active'],
-    &:has(.menu-list__list-item > .menu-list__link:not([aria-haspopup]):hover) {
+    &[transparent='not-sticky'][data-sticky-state='active'] {
       --header-logo-display: unset;
       --header-logo-inverse-display: unset;
       --color-foreground: inherit;
@@ -564,7 +563,7 @@
     }
 
     /** For transparent header, apply transparent text color to rows when menu is not hovered */
-    &:not([data-sticky-state='active']):not(:has(.menu-list__link:hover)):not(:has(header-menu[aria-expanded='true']))
+    &:not([data-sticky-state='active']):not(:has(header-menu[aria-expanded='true']))
       .header__row {
       --color-foreground: var(--color-transparent-text);
       --color-foreground-rgb: var(--color-transparent-text-rgb);
@@ -576,7 +575,7 @@
 
     /* Swap the cart bubble in transparent state only when using the default
        style. Custom bubble colors apply unchanged across header states. */
-    &[data-bubble-style='default']:not([data-sticky-state='active']):not(:has(.menu-list__link:hover)):not(
+    &[data-bubble-style='default']:not([data-sticky-state='active']):not(
         :has(header-menu[aria-expanded='true'])
       )
       .header__row {
@@ -586,7 +585,6 @@
 
     /* Multiple selectors for performance: each simple :has() check is faster than one complex selector with multiple conditions */
     &:has(.mega-menu__list:hover),
-    &:has(.menu-list__link:hover),
     &:has(header-menu[aria-expanded='true']) {
       --header-logo-display: unset;
       --header-logo-inverse-display: unset;

@@ -285,7 +285,25 @@
   {% endif %}
 </div>
 
+<p class="bakata-cart-help">
+  ¿Necesitas ayuda? <a href="mailto:support@bakata.store">support@bakata.store</a>
+</p>
+
 {% stylesheet %}
+  .bakata-cart-help {
+    width: 100%;
+    margin: var(--gap-md) 0 0;
+    color: var(--color-foreground-subdued);
+    font-size: var(--font-size--sm);
+    text-align: center;
+  }
+
+  .bakata-cart-help a {
+    color: var(--color-foreground);
+    font-weight: 700;
+    text-underline-offset: 3px;
+  }
+
   .cart-actions {
     display: flex;
     flex-direction: column;

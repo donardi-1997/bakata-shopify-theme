@@ -46,7 +46,7 @@
     "type_line_height_h6": "display-loose",
     "page_transition_enabled": false,
     "transition_to_main_product": false,
-    "card_hover_effect": "lift",
+    "card_hover_effect": "none",
     "badge_position": "top-right",
     "badge_corner_radius": 100,
     "badge_sale_background_color": "#A55334",
@@ -112,7 +112,8 @@
     "auto_open_cart_drawer": true,
     "show_installments": false,
     "show_accelerated_checkout_buttons": false,
-    "currency_code_enabled_cart_total": false
+    "currency_code_enabled_cart_total": false,
+    "add_to_cart_animation": true
   },
   "presets": {
     "Horizon": {
@@ -153,7 +154,7 @@
       "type_line_height_h6": "display-loose",
       "page_transition_enabled": false,
       "transition_to_main_product": false,
-      "card_hover_effect": "lift",
+      "card_hover_effect": "none",
       "badge_position": "top-right",
       "badge_corner_radius": 100,
       "badge_sale_background_color": "#A55334",
@@ -219,7 +220,8 @@
       "auto_open_cart_drawer": true,
       "show_installments": false,
       "show_accelerated_checkout_buttons": false,
-      "currency_code_enabled_cart_total": false
+      "currency_code_enabled_cart_total": false,
+      "add_to_cart_animation": true
     }
   }
 }

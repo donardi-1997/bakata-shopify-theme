@@ -57,7 +57,7 @@
                 "max_width": "normal",
                 "alignment": "left",
                 "type_preset": "h3",
-                "font": "var(--font-body--family)",
+                "font": "var(--font-heading--family)",
                 "font_size": "1rem",
                 "line_height": "normal",
                 "letter_spacing": "normal",
@@ -77,7 +77,7 @@
             "text_f9CFLH": {
               "type": "text",
               "settings": {
-                "text": "<p>Productos útiles, una compra clara y menos ruido. Déjanos tu correo para enterarte de lo nuevo.</p>",
+                "text": "<p>Menos catálogo infinito, más productos útiles y una compra que se entiende de principio a fin.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -110,7 +110,7 @@
           "settings": {
             "width": "fill",
             "custom_width": 100,
-            "heading_preset": "h3",
+            "heading_preset": "h5",
             "border_style": "all",
             "input_style": "custom",
             "border_width": 1,
@@ -121,7 +121,7 @@
             "input_type_preset": "paragraph",
             "style_class": "button-unstyled",
             "display_type": "arrow",
-            "label": "Quiero enterarme",
+            "label": "Únete a Bakatá",
             "integrated_button": true,
             "button_type_preset": "paragraph",
             "padding-block-start": 0,
@@ -138,7 +138,7 @@
           "type": "menu",
           "settings": {
             "menu": "legal-bakata",
-            "heading": "Legal y ayuda",
+            "heading": "Ayuda y legal",
             "menu_spacing": 10,
             "show_as_accordion": true,
             "accordion_icon": "plus",
@@ -153,20 +153,43 @@
             "padding-inline-end": 0
           },
           "blocks": {}
+        },
+        "shop_menu_bakata": {
+          "type": "menu",
+          "settings": {
+            "menu": "comprar-bakata",
+            "heading": "Comprar",
+            "menu_spacing": 10,
+            "show_as_accordion": true,
+            "accordion_icon": "plus",
+            "accordion_dividers": false,
+            "background_color": "",
+            "text_color": "#EDE5D8",
+            "heading_preset": "h5",
+            "link_preset": "paragraph",
+            "padding_block_start": 0,
+            "padding_block_end": 0,
+            "padding_inline_start": 0,
+            "padding_inline_end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "group_H6VpwJ",
+        "shop_menu_bakata",
         "legal_menu_bakata",
         "email_signup_crihX7"
       ],
       "name": "t:names.footer",
       "settings": {
         "section_width": "page-width",
-        "gap": 28,
+        "gap": 36,
         "background_color": "#17352B",
         "padding-block-start": 64,
-        "padding-block-end": 56
+        "padding-block-end": 56,
+        "padding_block_start": 72,
+        "padding_block_end": 64
       }
     },
     "footer_utilities_jLGE8U": {
@@ -205,7 +228,9 @@
         "divider_color": "#365447",
         "background_color": "#17352B",
         "padding-block-start": 20,
-        "padding-block-end": 28
+        "padding-block-end": 28,
+        "padding_block_start": 20,
+        "padding_block_end": 24
       }
     }
   },
