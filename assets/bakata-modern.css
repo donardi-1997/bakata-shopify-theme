@@ -921,3 +921,23 @@ footer a {
     background: #17352B !important;
   }
 }
+
+
+/* Trust cards alignment — keep all three cards on one visual baseline */
+.bakata-value-props__grid {
+  align-items: stretch;
+}
+
+.bakata-value-props__card {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+@media screen and (min-width: 990px) {
+  .bakata-value-props__grid .bakata-value-props__card:nth-child(2),
+  .bakata-value-props__grid .bakata-value-props__card:nth-child(2):hover {
+    transform: none !important;
+  }
+}
