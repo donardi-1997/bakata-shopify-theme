@@ -133,10 +133,31 @@
             "button_border_color": "#E7B85A"
           },
           "blocks": {}
+        },
+        "legal_menu_bakata": {
+          "type": "menu",
+          "settings": {
+            "menu": "legal-bakata",
+            "heading": "Legal y ayuda",
+            "menu_spacing": 10,
+            "show_as_accordion": true,
+            "accordion_icon": "plus",
+            "accordion_dividers": false,
+            "background_color": "",
+            "text_color": "#EDE5D8",
+            "heading_preset": "h5",
+            "link_preset": "paragraph",
+            "padding-block-start": 0,
+            "padding-block-end": 0,
+            "padding-inline-start": 0,
+            "padding-inline-end": 0
+          },
+          "blocks": {}
         }
       },
       "block_order": [
         "group_H6VpwJ",
+        "legal_menu_bakata",
         "email_signup_crihX7"
       ],
       "name": "t:names.footer",
@@ -160,14 +181,6 @@
           },
           "blocks": {}
         },
-        "footer_policy_list_VCdnpa": {
-          "type": "footer-policy-list",
-          "settings": {
-            "font_size": "0.75rem",
-            "case": "none"
-          },
-          "blocks": {}
-        },
         "social_links_Ew63Kq": {
           "type": "social-links",
           "settings": {
@@ -182,7 +195,6 @@
       },
       "block_order": [
         "footer_copyright_jweRK8",
-        "footer_policy_list_VCdnpa",
         "social_links_Ew63Kq"
       ],
       "name": "t:names.utilities",
