@@ -1,0 +1,143 @@
+{% comment %}
+  Bakatá closing CTA for the homepage.
+{% endcomment %}
+
+<section
+  class="bakata-home-cta"
+  style="
+    --bcta-bg: {{ section.settings.background_color }};
+    --bcta-text: {{ section.settings.text_color }};
+    --bcta-accent: {{ section.settings.accent_color }};
+  "
+>
+  <div class="bakata-home-cta__inner page-width">
+    <div class="bakata-home-cta__copy">
+      {% if section.settings.eyebrow != blank %}
+        <p class="bakata-home-cta__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {% endif %}
+      {% if section.settings.heading != blank %}
+        <h2>{{ section.settings.heading | escape }}</h2>
+      {% endif %}
+      {% if section.settings.description != blank %}
+        <p>{{ section.settings.description | escape }}</p>
+      {% endif %}
+    </div>
+
+    <div class="bakata-home-cta__actions">
+      <a class="bakata-home-cta__primary" href="{{ section.settings.primary_link | default: routes.all_products_collection_url }}">
+        {{ section.settings.primary_label | escape }}
+        <span aria-hidden="true">↗</span>
+      </a>
+      <a class="bakata-home-cta__secondary" href="mailto:support@bakata.store">
+        support@bakata.store
+      </a>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .bakata-home-cta {
+    background: var(--bcta-bg);
+    color: var(--bcta-text);
+  }
+
+  .bakata-home-cta__inner {
+    display: grid;
+    grid-template-columns: minmax(0, 1.15fr) minmax(280px, 0.85fr);
+    gap: clamp(36px, 7vw, 100px);
+    align-items: end;
+    padding-block: clamp(76px, 10vw, 132px);
+  }
+
+  .bakata-home-cta__eyebrow {
+    margin: 0 0 14px;
+    color: var(--bcta-accent);
+    font-size: 0.76rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+  }
+
+  .bakata-home-cta h2 {
+    max-width: 12ch;
+    margin: 0;
+    font-family: var(--font-heading--family);
+    font-size: clamp(2.9rem, 6vw, 5.9rem);
+    line-height: 0.94;
+    letter-spacing: -0.055em;
+    text-wrap: balance;
+  }
+
+  .bakata-home-cta__copy > p:last-child {
+    max-width: 55ch;
+    margin: 22px 0 0;
+    color: color-mix(in srgb, var(--bcta-text) 70%, transparent);
+    line-height: 1.65;
+  }
+
+  .bakata-home-cta__actions {
+    display: grid;
+    gap: 12px;
+    justify-items: stretch;
+  }
+
+  .bakata-home-cta__primary,
+  .bakata-home-cta__secondary {
+    min-height: 58px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    padding-inline: 20px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-weight: 750;
+    transition: transform 170ms ease, background 170ms ease;
+  }
+
+  .bakata-home-cta__primary {
+    background: var(--bcta-accent);
+    color: var(--bcta-bg);
+  }
+
+  .bakata-home-cta__secondary {
+    border: 1px solid color-mix(in srgb, var(--bcta-text) 24%, transparent);
+    color: var(--bcta-text);
+  }
+
+  .bakata-home-cta__primary:hover,
+  .bakata-home-cta__secondary:hover {
+    transform: translateY(-2px);
+  }
+
+  @media screen and (max-width: 749px) {
+    .bakata-home-cta__inner {
+      grid-template-columns: 1fr;
+      align-items: start;
+    }
+
+    .bakata-home-cta h2 {
+      max-width: 10ch;
+      font-size: clamp(2.6rem, 12vw, 4.2rem);
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Bakatá - CTA",
+  "settings": [
+    { "type": "text", "id": "eyebrow", "label": "Etiqueta", "default": "Cuando quieras empezar" },
+    { "type": "text", "id": "heading", "label": "Título", "default": "Haz tu próxima compra un poco más simple." },
+    { "type": "textarea", "id": "description", "label": "Descripción", "default": "Explora el catálogo o escríbenos si necesitas ayuda para decidir. Queremos que comprar se sienta claro de principio a fin." },
+    { "type": "text", "id": "primary_label", "label": "Botón principal", "default": "Ver catálogo" },
+    { "type": "url", "id": "primary_link", "label": "Enlace principal" },
+    { "type": "color", "id": "background_color", "label": "Fondo", "default": "#17352B" },
+    { "type": "color", "id": "text_color", "label": "Texto", "default": "#FFF9F1" },
+    { "type": "color", "id": "accent_color", "label": "Acento", "default": "#E7B85A" }
+  ],
+  "presets": [
+    { "name": "Bakatá - CTA" }
+  ]
+}
+{% endschema %}
