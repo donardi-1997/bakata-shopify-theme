@@ -275,4 +275,28 @@
       background: transparent;
     }
   }
+
+  /* Bakatá: keep the primary checkout action comfortable and visible on mobile. */
+  .cart-drawer__summary {
+    border-block-start: var(--style-border-width) solid rgb(var(--color-foreground-rgb) / var(--opacity-10-25));
+    box-shadow: 0 -12px 28px rgb(var(--color-foreground-rgb) / 0.08);
+    mask-image: none;
+    padding-block-end: max(var(--cart-drawer-summary-padding), env(safe-area-inset-bottom));
+  }
+
+  @media screen and (max-width: 749px) {
+    .cart-drawer__summary {
+      --cart-drawer-summary-padding: var(--padding-lg);
+      gap: var(--gap-lg);
+    }
+
+    .cart-drawer__items {
+      padding-block-start: var(--padding-md);
+    }
+
+    .cart-drawer__summary .cart__checkout-button {
+      min-height: 52px;
+    }
+  }
+
 {% endstylesheet %}
