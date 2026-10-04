@@ -675,3 +675,33 @@ footer a {
     padding: 0;
   }
 }
+
+
+/* Content rails — keep large editorial sections away from viewport edges */
+.bakata-hero__inner,
+.bakata-categories__inner,
+.bakata-value-props__inner,
+.bakata-home-cta__inner {
+  width: min(100%, 1480px);
+  margin-inline: auto;
+  padding-inline: clamp(28px, 4.2vw, 72px);
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 989px) {
+  .bakata-hero__inner,
+  .bakata-categories__inner,
+  .bakata-value-props__inner,
+  .bakata-home-cta__inner {
+    padding-inline: 28px;
+  }
+}
+
+@media screen and (max-width: 749px) {
+  .bakata-hero__inner,
+  .bakata-categories__inner,
+  .bakata-value-props__inner,
+  .bakata-home-cta__inner {
+    padding-inline: 20px;
+  }
+}
