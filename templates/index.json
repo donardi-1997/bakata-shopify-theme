@@ -320,11 +320,47 @@
         "text_color": "#17352B",
         "accent_color": "#A55334"
       }
+    },
+    "bakata_hero": {
+      "type": "bakata-hero",
+      "settings": {
+        "eyebrow": "Bakatá · selección para tu día a día",
+        "heading": "Lo útil también puede sentirse bien.",
+        "description": "Seleccionamos productos prácticos para ayudarte a resolver mejor lo cotidiano, sin convertir comprar en una tarea.",
+        "primary_label": "Explorar catálogo",
+        "primary_link": "shopify://collections/all",
+        "secondary_label": "Por qué Bakatá",
+        "secondary_link": "#bakata-confianza",
+        "background_color": "#17352B",
+        "text_color": "#FFF9F1",
+        "accent_color": "#E7B85A",
+        "soft_color": "#A55334"
+      }
+    },
+    "bakata_categories": {
+      "type": "bakata-categories",
+      "settings": {
+        "eyebrow": "Lo que vas a encontrar",
+        "heading": "Cosas que merecen un lugar en tu día.",
+        "description": "Estamos construyendo una selección pequeña y útil. Menos catálogo infinito, más productos con una razón para estar aquí.",
+        "card_1_title": "Hogar que ayuda",
+        "card_1_text": "Pequeñas soluciones para ordenar, limpiar y hacer más llevadero lo cotidiano.",
+        "card_1_link": "shopify://collections/all",
+        "card_2_title": "Cuidado sin complicarte",
+        "card_2_text": "Productos pensados para simplificar tu rutina, no para llenarla de pasos.",
+        "card_2_link": "shopify://collections/all",
+        "card_3_title": "Gadgets con propósito",
+        "card_3_text": "Tecnología sencilla para resolver cosas concretas, sin pagar por funciones que no necesitas.",
+        "card_3_link": "shopify://collections/all",
+        "background_color": "#FFF9F1",
+        "text_color": "#17352B",
+        "accent_color": "#A55334"
+      }
     }
   },
   "order": [
-    "hero_jVaWmY",
-    "bakata_value_props",
-    "product_list_fa6P9H"
+    "bakata_hero",
+    "bakata_categories",
+    "bakata_value_props"
   ]
 }
