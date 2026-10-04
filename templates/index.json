@@ -11,15 +11,15 @@
     "bakata_value_props": {
       "type": "bakata-value-props",
       "settings": {
-        "eyebrow": "Hecho para comprar sin vueltas",
-        "heading": "Menos ruido. Más cosas útiles.",
-        "description": "Bakatá selecciona productos prácticos y construye una experiencia de compra clara para Colombia.",
-        "item_1_title": "Selección útil",
-        "item_1_text": "Priorizamos productos que resuelven algo real y se entienden rápido.",
-        "item_2_title": "Compra clara",
-        "item_2_text": "Información simple, precios visibles y una navegación sin fricción.",
-        "item_3_title": "Soporte cercano",
-        "item_3_text": "Si tienes una duda antes o después de comprar, queremos que sea fácil resolverla.",
+        "eyebrow": "Por qué Bakatá",
+        "heading": "Una tienda que se siente clara desde el primer clic.",
+        "description": "Elegimos menos, explicamos mejor y mantenemos el proceso de compra simple.",
+        "item_1_title": "Selección curada",
+        "item_1_text": "No buscamos tener de todo. Buscamos que cada producto tenga una razón para estar aquí.",
+        "item_2_title": "Información sin ruido",
+        "item_2_text": "Beneficios, precio y condiciones importantes visibles antes de comprar.",
+        "item_3_title": "Ayuda cuando la necesitas",
+        "item_3_text": "Un canal claro de soporte para acompañarte antes y después de la compra.",
         "background_color": "#F3E9DC",
         "text_color": "#17352B",
         "accent_color": "#A55334"
@@ -28,12 +28,12 @@
     "bakata_hero": {
       "type": "bakata-hero",
       "settings": {
-        "eyebrow": "Bakatá · selección para tu día a día",
-        "heading": "Lo útil también puede sentirse bien.",
-        "description": "Seleccionamos productos prácticos para ayudarte a resolver mejor lo cotidiano, sin convertir comprar en una tarea.",
-        "primary_label": "Explorar catálogo",
+        "eyebrow": "Curado para el día a día",
+        "heading": "Menos vueltas. Mejores hallazgos.",
+        "description": "Bakatá reúne productos prácticos para hogar, cuidado y tecnología cotidiana. Una selección pequeña, clara y pensada para comprar mejor.",
+        "primary_label": "Explorar productos",
         "primary_link": "shopify://collections/all",
-        "secondary_label": "Por qué Bakatá",
+        "secondary_label": "Conoce Bakatá",
         "secondary_link": "#bakata-confianza",
         "background_color": "#17352B",
         "text_color": "#FFF9F1",
@@ -44,9 +44,9 @@
     "bakata_categories": {
       "type": "bakata-categories",
       "settings": {
-        "eyebrow": "Lo que vas a encontrar",
-        "heading": "Cosas que merecen un lugar en tu día.",
-        "description": "Estamos construyendo una selección pequeña y útil. Menos catálogo infinito, más productos con una razón para estar aquí.",
+        "eyebrow": "Explora por intención",
+        "heading": "Tres formas de hacerte la vida más fácil.",
+        "description": "Nada de catálogo infinito. Organizamos la tienda alrededor de problemas cotidianos y productos que se entienden rápido.",
         "card_1_title": "Hogar que ayuda",
         "card_1_text": "Pequeñas soluciones para ordenar, limpiar y hacer más llevadero lo cotidiano.",
         "card_1_link": "shopify://collections/all",
@@ -60,11 +60,38 @@
         "text_color": "#17352B",
         "accent_color": "#A55334"
       }
+    },
+    "bakata_marquee": {
+      "type": "bakata-marquee",
+      "settings": {
+        "item_1": "Selección útil",
+        "item_2": "Compra clara",
+        "item_3": "Soporte cercano",
+        "item_4": "Hecho para Colombia",
+        "background_color": "#FFF9F1",
+        "text_color": "#17352B",
+        "accent_color": "#A55334"
+      }
+    },
+    "bakata_home_cta": {
+      "type": "bakata-home-cta",
+      "settings": {
+        "eyebrow": "Cuando quieras empezar",
+        "heading": "Haz tu próxima compra un poco más simple.",
+        "description": "Explora el catálogo o escríbenos si necesitas ayuda para decidir. Queremos que comprar se sienta claro de principio a fin.",
+        "primary_label": "Ver catálogo",
+        "primary_link": "shopify://collections/all",
+        "background_color": "#17352B",
+        "text_color": "#FFF9F1",
+        "accent_color": "#E7B85A"
+      }
     }
   },
   "order": [
     "bakata_hero",
+    "bakata_marquee",
     "bakata_categories",
-    "bakata_value_props"
+    "bakata_value_props",
+    "bakata_home_cta"
   ]
 }
