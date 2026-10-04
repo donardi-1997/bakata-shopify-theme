@@ -705,3 +705,37 @@ footer a {
     padding-inline: 20px;
   }
 }
+
+
+/* Navbar interaction fix — avoid duplicate active + hover underlines */
+.menu-list__link--active .menu-list__link-title::after {
+  transform: scaleX(0) !important;
+}
+
+.menu-list__link--active .menu-list__link-title {
+  font-weight: 720;
+  opacity: 1;
+}
+
+.menu-list__link:hover .menu-list__link-title::after,
+.menu-list__link:focus-visible .menu-list__link-title::after {
+  transform: scaleX(1);
+}
+
+.menu-list__link:hover .menu-list__link-title {
+  opacity: 0.72;
+}
+
+.menu-list__link--active:hover .menu-list__link-title::after,
+.menu-list__link--active:focus-visible .menu-list__link-title::after {
+  transform: scaleX(1) !important;
+}
+
+#header-component {
+  background: #FFF9F1;
+}
+
+.header-section {
+  backdrop-filter: none;
+  -webkit-backdrop-filter: none;
+}
