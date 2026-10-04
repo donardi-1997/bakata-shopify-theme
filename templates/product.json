@@ -68,7 +68,7 @@
             "custom_width_mobile": 100,
             "height": "fit",
             "details_position": "flex-start",
-            "gap": 22,
+            "gap": 20,
             "sticky_details_desktop": true,
             "background_media": "none",
             "background_color": "#FFF9F1",
@@ -78,11 +78,15 @@
             "border_width": 1,
             "border_opacity": 100,
             "border_color": "#E2D4C2",
-            "border_radius": 18,
+            "border_radius": 20,
             "padding-block-start": 30,
             "padding-block-end": 30,
             "padding-inline-start": 28,
-            "padding-inline-end": 28
+            "padding-inline-end": 28,
+            "padding_block_start": 32,
+            "padding_block_end": 32,
+            "padding_inline_start": 30,
+            "padding_inline_end": 30
           },
           "blocks": {
             "group_icgrde": {
@@ -303,7 +307,7 @@
               "type": "text",
               "name": "Bakatá - confianza",
               "settings": {
-                "text": "<p>Envíos a toda Colombia · Atención cercana · Información clara antes de comprar</p>",
+                "text": "<p>Compra clara · soporte en Colombia · políticas visibles antes de pagar</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -316,12 +320,38 @@
                 "wrap": "pretty",
                 "text_color": "#17352B",
                 "background": true,
-                "background_color": "#FFF9F1",
-                "corner_radius": 14,
+                "background_color": "#F3E9DC",
+                "corner_radius": 12,
                 "padding-block-start": 12,
                 "padding-block-end": 12,
                 "padding-inline-start": 14,
                 "padding-inline-end": 14
+              },
+              "blocks": {}
+            },
+            "bakata_policy_links": {
+              "type": "text",
+              "name": "Bakatá - ayuda",
+              "settings": {
+                "text": "<p><strong>Antes de comprar</strong><br><a href=\"/pages/politica-de-envios\">Envíos</a> · <a href=\"/pages/cambios-devoluciones-y-retracto\">Cambios y devoluciones</a> · <a href=\"mailto:support@bakata.store\">Soporte</a></p>",
+                "width": "100%",
+                "max_width": "normal",
+                "alignment": "left",
+                "type_preset": "paragraph",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "wrap": "pretty",
+                "text_color": "#17352B",
+                "background": false,
+                "background_color": "#00000026",
+                "corner_radius": 0,
+                "padding_block_start": 4,
+                "padding_block_end": 0,
+                "padding_inline_start": 0,
+                "padding_inline_end": 0
               },
               "blocks": {}
             }
@@ -332,6 +362,7 @@
             "text_bakata_trust",
             "variant_picker_R3rGDr",
             "buy_buttons_eYQEYi",
+            "bakata_policy_links",
             "text_aEtTtq"
           ]
         }
@@ -344,11 +375,13 @@
         "desktop_media_position": "left",
         "equal_columns": false,
         "limit_details_width": false,
-        "gap": 40,
+        "gap": 48,
         "enable_sticky_add_to_cart": true,
         "background_color": "{{ settings.color_palette.background }}",
         "padding-block-start": 24,
-        "padding-block-end": 48
+        "padding-block-end": 48,
+        "padding_block_start": 32,
+        "padding_block_end": 64
       }
     },
     "product_recommendations_qggXJq": {
@@ -363,7 +396,7 @@
             "max_width": "normal",
             "alignment": "left",
             "type_preset": "h3",
-            "font": "var(--font-body--family)",
+            "font": "var(--font-heading--family)",
             "font_size": "1rem",
             "line_height": "normal",
             "letter_spacing": "normal",
@@ -436,7 +469,8 @@
                 "padding-block-start": 8,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-end": 0,
+                "padding_block_start": 8
               },
               "blocks": {}
             },
@@ -483,14 +517,16 @@
         "columns": 4,
         "mobile_columns": "2",
         "columns_gap": 18,
-        "rows_gap": 36,
+        "rows_gap": 32,
         "icons_style": "arrow",
         "icons_shape": "none",
         "section_width": "page-width",
         "gap": 28,
         "background_color": "{{ settings.color_palette.background }}",
         "padding-block-start": 64,
-        "padding-block-end": 72
+        "padding-block-end": 72,
+        "padding_block_start": 72,
+        "padding_block_end": 80
       }
     }
   },
