@@ -834,3 +834,90 @@ footer a {
     -webkit-backdrop-filter: none;
   }
 }
+
+
+/* Navbar v4 — dark home header, stable and continuous with hero */
+#header-component[transparent] .header__row--top {
+  background: #17352B !important;
+  color: #FFF9F1 !important;
+  border-bottom: 1px solid rgb(255 249 241 / 0.08) !important;
+}
+
+#header-component[transparent] .header__columns {
+  color: #FFF9F1 !important;
+}
+
+#header-component[transparent] .header-logo,
+#header-component[transparent] .header-logo__text,
+#header-component[transparent] .header-menu,
+#header-component[transparent] .menu-list__link,
+#header-component[transparent] .menu-list__link-title {
+  color: #FFF9F1 !important;
+}
+
+#header-component[transparent] .header-menu__inner {
+  border-color: rgb(255 249 241 / 0.18) !important;
+  background: rgb(255 249 241 / 0.08) !important;
+  box-shadow: 0 10px 28px rgb(0 0 0 / 0.10) !important;
+  backdrop-filter: blur(18px) saturate(145%) !important;
+  -webkit-backdrop-filter: blur(18px) saturate(145%) !important;
+}
+
+#header-component[transparent] .menu-list__link-title {
+  opacity: 0.82 !important;
+}
+
+#header-component[transparent] .menu-list__link:hover .menu-list__link-title,
+#header-component[transparent] .menu-list__link:focus-visible .menu-list__link-title {
+  background: rgb(255 249 241 / 0.10) !important;
+  opacity: 1 !important;
+}
+
+#header-component[transparent] .menu-list__link--active .menu-list__link-title {
+  background: rgb(255 249 241 / 0.15) !important;
+  color: #FFF9F1 !important;
+  opacity: 1 !important;
+}
+
+#header-component[transparent] .header-actions__action,
+#header-component[transparent] .search-action {
+  color: #FFF9F1 !important;
+  border-color: rgb(255 249 241 / 0.22) !important;
+  background: rgb(255 249 241 / 0.08) !important;
+}
+
+#header-component[transparent] .header-actions__action:hover,
+#header-component[transparent] .search-action:hover {
+  color: #FFF9F1 !important;
+  border-color: rgb(255 249 241 / 0.34) !important;
+  background: rgb(255 249 241 / 0.14) !important;
+  transform: none !important;
+}
+
+/* Remove visual seam between home navigation and hero */
+#header-component[transparent] + * .bakata-hero,
+#header-component[transparent] ~ * .bakata-hero {
+  margin-top: 0;
+}
+
+/* Keep the center navigation readable even if Horizon toggles row variables */
+#header-component[transparent] .menu-list__list-item,
+#header-component[transparent] .menu-list__list-item a {
+  color: #FFF9F1 !important;
+}
+
+@media screen and (min-width: 990px) {
+  #header-component[transparent] .header__row--top {
+    min-height: 78px;
+  }
+
+  #header-component[transparent] .header-menu__inner {
+    padding: 4px !important;
+  }
+}
+
+@media screen and (max-width: 989px) {
+  #header-component[transparent] .header__row--top {
+    background: #17352B !important;
+  }
+}
