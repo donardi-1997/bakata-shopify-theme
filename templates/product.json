@@ -71,18 +71,18 @@
             "gap": 22,
             "sticky_details_desktop": true,
             "background_media": "none",
-            "background_color": "#F3E9DC",
+            "background_color": "#FFF9F1",
             "video_position": "cover",
             "background_image_position": "cover",
             "border": "solid",
             "border_width": 1,
             "border_opacity": 100,
             "border_color": "#E2D4C2",
-            "border_radius": 20,
-            "padding-block-start": 28,
-            "padding-block-end": 28,
-            "padding-inline-start": 24,
-            "padding-inline-end": 24
+            "border_radius": 18,
+            "padding-block-start": 30,
+            "padding-block-end": 30,
+            "padding-inline-start": 28,
+            "padding-inline-end": 28
           },
           "blocks": {
             "group_icgrde": {
@@ -133,7 +133,7 @@
                     "max_width": "normal",
                     "alignment": "left",
                     "type_preset": "h2",
-                    "font": "var(--font-body--family)",
+                    "font": "var(--font-heading--family)",
                     "font_size": "1rem",
                     "line_height": "normal",
                     "letter_spacing": "normal",
@@ -324,6 +324,28 @@
                 "padding-inline-end": 14
               },
               "blocks": {}
+            },
+            "price_tVjtKg": {
+              "type": "price",
+              "settings": {
+                "show_sale_price_first": true,
+                "show_installments": false,
+                "show_tax_info": false,
+                "type_preset": "h4",
+                "width": "100%",
+                "alignment": "left",
+                "font": "var(--font-body--family)",
+                "font_size": "1rem",
+                "line_height": "normal",
+                "letter_spacing": "normal",
+                "case": "none",
+                "text_color": "",
+                "padding-block-start": 2,
+                "padding-block-end": 0,
+                "padding-inline-start": 0,
+                "padding-inline-end": 0
+              },
+              "blocks": {}
             }
           },
           "block_order": [
@@ -344,7 +366,7 @@
         "desktop_media_position": "left",
         "equal_columns": false,
         "limit_details_width": false,
-        "gap": 32,
+        "gap": 40,
         "enable_sticky_add_to_cart": true,
         "background_color": "{{ settings.color_palette.background }}",
         "padding-block-start": 24,
