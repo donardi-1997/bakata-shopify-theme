@@ -52,11 +52,11 @@
             "text_LWt8Pz": {
               "type": "text",
               "settings": {
-                "text": "<h2>Únete a Bakatá</h2>",
+                "text": "<h2>Bakatá, para lo cotidiano.</h2>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
-                "type_preset": "h4",
+                "type_preset": "h3",
                 "font": "var(--font-body--family)",
                 "font_size": "1rem",
                 "line_height": "normal",
@@ -69,14 +69,15 @@
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-end": 0,
+                "text_color": "#FFF9F1"
               },
               "blocks": {}
             },
             "text_f9CFLH": {
               "type": "text",
               "settings": {
-                "text": "<p>Recibe novedades, lanzamientos y ofertas sin llenar tu bandeja de ruido.</p>",
+                "text": "<p>Productos útiles, una compra clara y menos ruido. Déjanos tu correo para enterarte de lo nuevo.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
@@ -93,7 +94,8 @@
                 "padding-block-start": 0,
                 "padding-block-end": 0,
                 "padding-inline-start": 0,
-                "padding-inline-end": 0
+                "padding-inline-end": 0,
+                "text_color": "#EDE5D8"
               },
               "blocks": {}
             }
@@ -113,9 +115,9 @@
             "input_style": "custom",
             "border_width": 1,
             "border_radius": 100,
-            "input_background_color": "{{ settings.color_palette.background }}",
-            "input_text_color": "{{ settings.color_palette.color1 }}",
-            "input_border_color": "{{ settings.color_palette.color2 }}",
+            "input_background_color": "#17352B",
+            "input_text_color": "#FFF9F1",
+            "input_border_color": "#6C8178",
             "input_type_preset": "paragraph",
             "style_class": "button-unstyled",
             "display_type": "arrow",
@@ -125,7 +127,10 @@
             "padding-block-start": 0,
             "padding-block-end": 0,
             "padding-inline-start": 0,
-            "padding-inline-end": 0
+            "padding-inline-end": 0,
+            "button_background_color": "#E7B85A",
+            "button_text_color": "#17352B",
+            "button_border_color": "#E7B85A"
           },
           "blocks": {}
         }
@@ -137,10 +142,10 @@
       "name": "t:names.footer",
       "settings": {
         "section_width": "page-width",
-        "gap": 24,
-        "background_color": "#F3E9DC",
-        "padding-block-start": 48,
-        "padding-block-end": 48
+        "gap": 28,
+        "background_color": "#17352B",
+        "padding-block-start": 64,
+        "padding-block-end": 56
       }
     },
     "footer_utilities_jLGE8U": {
@@ -185,10 +190,10 @@
         "section_width": "page-width",
         "gap": 24,
         "divider_thickness": 1,
-        "divider_color": "#D8C8B5",
-        "background_color": "#F3E9DC",
+        "divider_color": "#365447",
+        "background_color": "#17352B",
         "padding-block-start": 20,
-        "padding-block-end": 48
+        "padding-block-end": 28
       }
     }
   },
