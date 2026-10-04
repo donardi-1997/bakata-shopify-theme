@@ -1,0 +1,424 @@
+{% comment %}
+  Bakatá branded hero. No product-specific claims; safe before catalog launch.
+{% endcomment %}
+
+<section
+  class="bakata-hero"
+  style="
+    --hero-bg: {{ section.settings.background_color }};
+    --hero-text: {{ section.settings.text_color }};
+    --hero-accent: {{ section.settings.accent_color }};
+    --hero-soft: {{ section.settings.soft_color }};
+  "
+>
+  <div class="bakata-hero__inner page-width">
+    <div class="bakata-hero__copy">
+      {% if section.settings.eyebrow != blank %}
+        <p class="bakata-hero__eyebrow">{{ section.settings.eyebrow | escape }}</p>
+      {% endif %}
+
+      {% if section.settings.heading != blank %}
+        <h1 class="bakata-hero__heading">{{ section.settings.heading | escape }}</h1>
+      {% endif %}
+
+      {% if section.settings.description != blank %}
+        <p class="bakata-hero__description">{{ section.settings.description | escape }}</p>
+      {% endif %}
+
+      <div class="bakata-hero__actions">
+        {% if section.settings.primary_label != blank %}
+          <a class="bakata-hero__button bakata-hero__button--primary" href="{{ section.settings.primary_link | default: routes.all_products_collection_url }}">
+            {{ section.settings.primary_label | escape }}
+          </a>
+        {% endif %}
+        {% if section.settings.secondary_label != blank %}
+          <a class="bakata-hero__button bakata-hero__button--secondary" href="{{ section.settings.secondary_link | default: '#bakata-confianza' }}">
+            {{ section.settings.secondary_label | escape }}
+          </a>
+        {% endif %}
+      </div>
+
+      <div class="bakata-hero__proof" aria-label="Beneficios Bakatá">
+        <span>Colombia</span>
+        <i aria-hidden="true"></i>
+        <span>Compra simple</span>
+        <i aria-hidden="true"></i>
+        <span>Soporte cercano</span>
+      </div>
+    </div>
+
+    <div class="bakata-hero__visual" aria-hidden="true">
+      <div class="bakata-hero__sun"></div>
+      <div class="bakata-hero__ring"></div>
+      <div class="bakata-hero__brandmark">B</div>
+
+      <div class="bakata-hero__tile bakata-hero__tile--one">
+        <span class="bakata-hero__tile-kicker">01</span>
+        <strong>Hogar</strong>
+        <small>cosas que sí ayudan</small>
+      </div>
+      <div class="bakata-hero__tile bakata-hero__tile--two">
+        <span class="bakata-hero__tile-kicker">02</span>
+        <strong>Cuidado</strong>
+        <small>menos vueltas</small>
+      </div>
+      <div class="bakata-hero__tile bakata-hero__tile--three">
+        <span class="bakata-hero__tile-kicker">03</span>
+        <strong>Gadgets</strong>
+        <small>con propósito</small>
+      </div>
+    </div>
+  </div>
+</section>
+
+{% stylesheet %}
+  .bakata-hero {
+    overflow: hidden;
+    background: var(--hero-bg);
+    color: var(--hero-text);
+  }
+
+  .bakata-hero__inner {
+    min-height: min(760px, calc(100svh - 112px));
+    display: grid;
+    grid-template-columns: minmax(0, 1.05fr) minmax(320px, 0.95fr);
+    align-items: center;
+    gap: clamp(36px, 6vw, 88px);
+    padding-block: clamp(72px, 8vw, 120px);
+  }
+
+  .bakata-hero__copy {
+    position: relative;
+    z-index: 2;
+    max-width: 720px;
+  }
+
+  .bakata-hero__eyebrow {
+    margin: 0 0 18px;
+    color: var(--hero-accent);
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.11em;
+    text-transform: uppercase;
+  }
+
+  .bakata-hero__heading {
+    margin: 0;
+    max-width: 11ch;
+    font-family: var(--font-heading--family);
+    font-size: clamp(3.4rem, 7.2vw, 7rem);
+    font-weight: var(--font-heading--weight);
+    line-height: 0.91;
+    letter-spacing: -0.055em;
+    text-wrap: balance;
+  }
+
+  .bakata-hero__description {
+    max-width: 53ch;
+    margin: 26px 0 0;
+    color: color-mix(in srgb, var(--hero-text) 76%, transparent);
+    font-size: clamp(1rem, 1.25vw, 1.18rem);
+    line-height: 1.65;
+  }
+
+  .bakata-hero__actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-top: 34px;
+  }
+
+  .bakata-hero__button {
+    min-height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0 22px;
+    border: 1px solid transparent;
+    border-radius: 999px;
+    font-weight: 700;
+    text-decoration: none;
+    transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+  }
+
+  .bakata-hero__button:hover {
+    transform: translateY(-2px);
+  }
+
+  .bakata-hero__button--primary {
+    background: var(--hero-accent);
+    color: var(--hero-bg);
+  }
+
+  .bakata-hero__button--secondary {
+    border-color: color-mix(in srgb, var(--hero-text) 30%, transparent);
+    color: var(--hero-text);
+    background: color-mix(in srgb, var(--hero-text) 5%, transparent);
+  }
+
+  .bakata-hero__proof {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-top: 34px;
+    color: color-mix(in srgb, var(--hero-text) 68%, transparent);
+    font-size: 0.82rem;
+  }
+
+  .bakata-hero__proof i {
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background: var(--hero-accent);
+  }
+
+  .bakata-hero__visual {
+    position: relative;
+    min-height: 520px;
+    border-radius: 34px;
+    background:
+      linear-gradient(145deg, color-mix(in srgb, var(--hero-soft) 18%, transparent), transparent 56%),
+      color-mix(in srgb, var(--hero-text) 4%, transparent);
+    border: 1px solid color-mix(in srgb, var(--hero-text) 12%, transparent);
+    isolation: isolate;
+  }
+
+  .bakata-hero__sun {
+    position: absolute;
+    width: 270px;
+    height: 270px;
+    top: 50%;
+    left: 50%;
+    border-radius: 50%;
+    background: var(--hero-accent);
+    transform: translate(-50%, -54%);
+    opacity: 0.94;
+  }
+
+  .bakata-hero__ring {
+    position: absolute;
+    width: 360px;
+    height: 360px;
+    top: 50%;
+    left: 50%;
+    border: 1px solid color-mix(in srgb, var(--hero-text) 24%, transparent);
+    border-radius: 50%;
+    transform: translate(-50%, -54%);
+  }
+
+  .bakata-hero__brandmark {
+    position: absolute;
+    inset: 50% auto auto 50%;
+    z-index: 2;
+    transform: translate(-50%, -58%);
+    color: var(--hero-bg);
+    font-family: var(--font-heading--family);
+    font-size: clamp(7rem, 14vw, 11rem);
+    font-weight: 800;
+    letter-spacing: -0.08em;
+    line-height: 1;
+  }
+
+  .bakata-hero__tile {
+    position: absolute;
+    z-index: 3;
+    width: min(220px, 46%);
+    padding: 18px 18px 16px;
+    border-radius: 18px;
+    background: color-mix(in srgb, var(--hero-bg) 88%, white 12%);
+    color: var(--hero-text);
+    border: 1px solid color-mix(in srgb, var(--hero-text) 12%, transparent);
+    box-shadow: 0 18px 50px rgb(0 0 0 / 0.16);
+  }
+
+  .bakata-hero__tile strong,
+  .bakata-hero__tile small {
+    display: block;
+  }
+
+  .bakata-hero__tile strong {
+    margin-top: 20px;
+    font-size: 1.05rem;
+  }
+
+  .bakata-hero__tile small {
+    margin-top: 4px;
+    color: color-mix(in srgb, var(--hero-text) 64%, transparent);
+  }
+
+  .bakata-hero__tile-kicker {
+    color: var(--hero-accent);
+    font-size: 0.72rem;
+    font-weight: 800;
+    letter-spacing: 0.1em;
+  }
+
+  .bakata-hero__tile--one {
+    top: 9%;
+    left: 3%;
+    transform: rotate(-5deg);
+  }
+
+  .bakata-hero__tile--two {
+    top: 17%;
+    right: -4%;
+    transform: rotate(5deg);
+  }
+
+  .bakata-hero__tile--three {
+    left: 15%;
+    bottom: 6%;
+    transform: rotate(3deg);
+  }
+
+  @media screen and (max-width: 989px) {
+    .bakata-hero__inner {
+      min-height: auto;
+      grid-template-columns: 1fr;
+      padding-block: 64px 48px;
+    }
+
+    .bakata-hero__heading {
+      font-size: clamp(3.1rem, 12vw, 5.5rem);
+    }
+
+    .bakata-hero__visual {
+      min-height: 430px;
+    }
+  }
+
+  @media screen and (max-width: 749px) {
+    .bakata-hero__inner {
+      padding-block-start: 48px;
+      gap: 40px;
+    }
+
+    .bakata-hero__description {
+      margin-top: 20px;
+    }
+
+    .bakata-hero__actions {
+      margin-top: 26px;
+    }
+
+    .bakata-hero__button {
+      width: 100%;
+    }
+
+    .bakata-hero__proof {
+      margin-top: 26px;
+    }
+
+    .bakata-hero__visual {
+      min-height: 360px;
+      margin-inline: -4px;
+      border-radius: 26px;
+    }
+
+    .bakata-hero__sun {
+      width: 205px;
+      height: 205px;
+    }
+
+    .bakata-hero__ring {
+      width: 270px;
+      height: 270px;
+    }
+
+    .bakata-hero__brandmark {
+      font-size: 8rem;
+    }
+
+    .bakata-hero__tile {
+      width: 46%;
+      padding: 14px;
+    }
+
+    .bakata-hero__tile strong {
+      margin-top: 12px;
+      font-size: 0.95rem;
+    }
+
+    .bakata-hero__tile small {
+      font-size: 0.73rem;
+    }
+  }
+{% endstylesheet %}
+
+{% schema %}
+{
+  "name": "Bakatá - Hero",
+  "settings": [
+    {
+      "type": "text",
+      "id": "eyebrow",
+      "label": "Etiqueta",
+      "default": "Bakatá · selección para tu día a día"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Título",
+      "default": "Lo útil también puede sentirse bien."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Descripción",
+      "default": "Seleccionamos productos prácticos para ayudarte a resolver mejor lo cotidiano, sin convertir comprar en una tarea."
+    },
+    {
+      "type": "text",
+      "id": "primary_label",
+      "label": "Botón principal",
+      "default": "Explorar catálogo"
+    },
+    {
+      "type": "url",
+      "id": "primary_link",
+      "label": "Enlace principal"
+    },
+    {
+      "type": "text",
+      "id": "secondary_label",
+      "label": "Botón secundario",
+      "default": "Por qué Bakatá"
+    },
+    {
+      "type": "url",
+      "id": "secondary_link",
+      "label": "Enlace secundario"
+    },
+    {
+      "type": "color",
+      "id": "background_color",
+      "label": "Fondo",
+      "default": "#17352B"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Texto",
+      "default": "#FFF9F1"
+    },
+    {
+      "type": "color",
+      "id": "accent_color",
+      "label": "Acento",
+      "default": "#E7B85A"
+    },
+    {
+      "type": "color",
+      "id": "soft_color",
+      "label": "Suave",
+      "default": "#A55334"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bakatá - Hero"
+    }
+  ]
+}
+{% endschema %}
