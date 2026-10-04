@@ -18,3 +18,15 @@ cart-drawer dialog,.cart-drawer__content{border-radius:var(--bk-radius-lg) 0 0 v
 [data-template^='collection'] .section h1,[data-template^='search'] .section h1{font-family:var(--font-heading--family);letter-spacing:-.035em}
 [data-template='cart'] .cart-summary{border-radius:var(--bk-radius-md)}
 @media(max-width:749px){.product-details>.group-block{box-shadow:none;border-radius:var(--bk-radius-md)}cart-drawer dialog,.cart-drawer__content{border-radius:0}.cart-drawer__summary{padding-bottom:max(20px,env(safe-area-inset-bottom))}}
+.product-grid__item .product-card__content{padding-inline:2px}
+.product-grid__item .product-card__content .price{font-weight:700}
+.product-grid__item .product-card__content a{text-underline-offset:3px}
+@media(max-width:749px){
+  .product-grid-container{padding-inline:18px}
+  .product-grid__item .product-card{border-radius:14px}
+  .product-grid__item .product-card__content{padding-top:8px}
+  .product-information{padding-inline:18px}
+}
+@media(max-width:389px){
+  .product-grid-container{padding-inline:14px}
+}
