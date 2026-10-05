@@ -257,6 +257,11 @@
   </div>
 </div>
 
+<div class="bakata-cod-note" role="note">
+  <strong>Pago contra entrega</strong>
+  <span>Elígelo en el checkout si está disponible para tu pedido. Confirmaremos tus datos antes del despacho.</span>
+</div>
+
 <div class="cart__ctas">
   <button
     type="submit"
@@ -290,6 +295,28 @@
 </p>
 
 {% stylesheet %}
+  .bakata-cod-note {
+    display: grid;
+    gap: var(--gap-3xs);
+    width: 100%;
+    margin: 0 0 var(--gap-md);
+    padding: var(--padding-sm) var(--padding-md);
+    border: 1px solid rgb(var(--color-foreground-rgb) / var(--opacity-10-25));
+    border-radius: var(--style-border-radius-containers);
+    background: rgb(var(--color-foreground-rgb) / var(--opacity-5));
+    color: var(--color-foreground);
+    font-size: var(--font-size--sm);
+    line-height: 1.45;
+  }
+
+  .bakata-cod-note strong {
+    font-weight: 700;
+  }
+
+  .bakata-cod-note span {
+    color: var(--color-foreground-subdued);
+  }
+
   .bakata-cart-help {
     width: 100%;
     margin: var(--gap-md) 0 0;
