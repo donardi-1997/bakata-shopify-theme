@@ -14,3 +14,363 @@
 .bakata-value-props__card:hover{transform:translateY(-3px);box-shadow:var(--bk-shadow-sm)}
 .bakata-marquee__track{animation-duration:34s}
 @media(max-width:749px){.bakata-marquee__track{animation:none}.bakata-marquee__set[aria-hidden='true']{display:none}.bakata-hero__inner{padding-top:64px}}
+/* Bakatá home product showcases v1 */
+.bakata-products{
+  background:var(--bp-bg);
+  color:var(--bp-text);
+  overflow:hidden;
+}
+.bakata-products__inner{
+  padding-top:clamp(54px,7vw,96px);
+  padding-bottom:clamp(54px,7vw,96px);
+}
+.bakata-products__header{
+  display:flex;
+  align-items:flex-end;
+  justify-content:space-between;
+  gap:32px;
+  margin-bottom:30px;
+}
+.bakata-products__copy{
+  max-width:760px;
+}
+.bakata-products__eyebrow{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  margin:0 0 12px;
+  color:var(--bp-accent);
+  font-size:.78rem;
+  font-weight:800;
+  letter-spacing:.14em;
+  text-transform:uppercase;
+}
+.bakata-products__eyebrow::before{
+  content:'';
+  width:18px;
+  height:1px;
+  background:currentColor;
+  opacity:.8;
+}
+.bakata-products__header h2{
+  margin:0;
+  max-width:14ch;
+  color:var(--bp-text);
+  font-family:var(--font-heading--family);
+  font-size:clamp(2.2rem,5vw,4.4rem);
+  line-height:.96;
+  letter-spacing:-.055em;
+  text-wrap:balance;
+}
+.bakata-products__description{
+  max-width:58ch;
+  margin:18px 0 0;
+  color:rgb(23 53 43 / .72);
+  font-size:1rem;
+  line-height:1.6;
+}
+.bakata-products__catalog-link{
+  flex:0 0 auto;
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--bp-text);
+  font-size:.92rem;
+  font-weight:700;
+  text-decoration:none;
+  border-bottom:1px solid rgb(23 53 43 / .28);
+  padding-bottom:4px;
+}
+.bakata-products__catalog-link span{
+  transition:transform 160ms var(--bk-ease);
+}
+.bakata-products__catalog-link:hover span{
+  transform:translate(2px,-2px);
+}
+.bakata-products__rail{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:16px;
+}
+.bakata-products__card{
+  min-width:0;
+}
+.bakata-products__media{
+  position:relative;
+  display:block;
+  overflow:hidden;
+  aspect-ratio:4/5;
+  border-radius:20px;
+  background:#fff;
+  border:1px solid rgb(23 53 43 / .08);
+}
+.bakata-products__image{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  display:block;
+  transition:transform 360ms var(--bk-ease);
+}
+.bakata-products__card:hover .bakata-products__image{
+  transform:scale(1.025);
+}
+.bakata-products__placeholder{
+  height:100%;
+  display:grid;
+  place-items:center;
+  color:var(--bp-text);
+  background:linear-gradient(145deg,#fff,#f3e9dc);
+  font-family:var(--font-heading--family);
+  font-size:1.4rem;
+}
+.bakata-products__arrow{
+  position:absolute;
+  top:12px;
+  right:12px;
+  width:38px;
+  height:38px;
+  display:grid;
+  place-items:center;
+  border-radius:999px;
+  background:rgb(255 249 241 / .92);
+  color:var(--bp-text);
+  border:1px solid rgb(23 53 43 / .10);
+  box-shadow:0 8px 22px rgb(23 53 43 / .10);
+  backdrop-filter:blur(10px);
+}
+.bakata-products__body{
+  padding:14px 2px 0;
+}
+.bakata-products__type{
+  margin:0 0 6px;
+  color:var(--bp-accent);
+  font-size:.72rem;
+  font-weight:800;
+  letter-spacing:.12em;
+  text-transform:uppercase;
+}
+.bakata-products__body h3{
+  margin:0;
+  font-size:1.03rem;
+  line-height:1.18;
+  letter-spacing:-.02em;
+}
+.bakata-products__body h3 a{
+  color:var(--bp-text);
+  text-decoration:none;
+}
+.bakata-products__meta{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:12px;
+  margin-top:12px;
+}
+.bakata-products__price{
+  color:var(--bp-text);
+  font-size:.98rem;
+  font-weight:800;
+}
+.bakata-products__cta{
+  color:var(--bp-text);
+  font-size:.82rem;
+  font-weight:700;
+  text-decoration:none;
+}
+.bakata-products__cta::after{
+  content:' →';
+}
+
+@media(max-width:989px){
+  .bakata-products__rail{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:22px 14px;
+  }
+}
+
+@media(max-width:749px){
+  .bakata-products__inner{
+    padding-top:42px;
+    padding-bottom:44px;
+  }
+  .bakata-products__header{
+    align-items:flex-start;
+    margin-bottom:20px;
+  }
+  .bakata-products__header h2{
+    max-width:12ch;
+    font-size:clamp(2rem,10vw,2.7rem);
+  }
+  .bakata-products__description{
+    margin-top:12px;
+    font-size:.9rem;
+    line-height:1.5;
+  }
+  .bakata-products__catalog-link{
+    display:none;
+  }
+  .bakata-products__rail{
+    display:flex;
+    gap:12px;
+    overflow-x:auto;
+    overscroll-behavior-inline:contain;
+    scroll-snap-type:x mandatory;
+    scroll-padding-inline:0;
+    padding:2px 20px 10px 0;
+    margin-right:calc(var(--page-margin,18px) * -1);
+    scrollbar-width:none;
+    -webkit-overflow-scrolling:touch;
+  }
+  .bakata-products__rail::-webkit-scrollbar{display:none}
+  .bakata-products__card{
+    flex:0 0 min(78vw,300px);
+    scroll-snap-align:start;
+  }
+  .bakata-products__media{
+    aspect-ratio:1/1;
+    border-radius:16px;
+  }
+  .bakata-products__image{
+    object-fit:contain;
+    background:#fff;
+  }
+  .bakata-products__body{
+    padding-top:10px;
+  }
+  .bakata-products__type{
+    font-size:.66rem;
+    margin-bottom:5px;
+  }
+  .bakata-products__body h3{
+    display:-webkit-box;
+    -webkit-line-clamp:2;
+    -webkit-box-orient:vertical;
+    overflow:hidden;
+    min-height:2.35em;
+    font-size:.96rem;
+  }
+  .bakata-products__meta{
+    margin-top:9px;
+  }
+  .bakata-products__price{
+    font-size:.92rem;
+  }
+  .bakata-products__cta{
+    font-size:.76rem;
+  }
+}
+
+@media(max-width:389px){
+  .bakata-products__card{
+    flex-basis:min(82vw,286px);
+  }
+}
+
+/* Bakatá home mobile polish v2 */
+@media(max-width:749px){
+  .bakata-products__inner{
+    padding-top:38px;
+    padding-bottom:40px;
+  }
+
+  .bakata-products__header{
+    margin-bottom:16px;
+  }
+
+  .bakata-products__eyebrow{
+    margin-bottom:8px;
+    font-size:.66rem;
+  }
+
+  .bakata-products__header h2{
+    max-width:13ch;
+    font-size:clamp(1.95rem,9.5vw,2.45rem);
+    line-height:.98;
+  }
+
+  .bakata-products__description{
+    max-width:34ch;
+    margin-top:10px;
+    font-size:.86rem;
+    line-height:1.45;
+  }
+
+  .bakata-products__rail{
+    gap:10px;
+    padding-bottom:8px;
+  }
+
+  .bakata-products__card{
+    flex-basis:min(84vw,310px);
+  }
+
+  .bakata-products__media{
+    border-radius:14px;
+  }
+
+  .bakata-products__arrow{
+    top:10px;
+    right:10px;
+    width:34px;
+    height:34px;
+  }
+
+  .bakata-products__body{
+    padding-top:9px;
+  }
+
+  .bakata-products__type{
+    font-size:.62rem;
+  }
+
+  .bakata-products__body h3{
+    min-height:auto;
+    font-size:.94rem;
+    line-height:1.16;
+  }
+
+  .bakata-products__meta{
+    align-items:baseline;
+    margin-top:7px;
+  }
+
+  .bakata-products__price{
+    font-size:.9rem;
+  }
+
+  .bakata-products__cta{
+    font-size:.72rem;
+  }
+}
+
+@media(max-width:389px){
+  .bakata-products__card{
+    flex-basis:min(86vw,292px);
+  }
+}
+
+
+/* Bakatá product showcase spacing — 2026-10-05 */
+.bakata-products__inner {
+  width: min(100%, 1500px);
+  margin-inline: auto;
+  padding-inline: clamp(28px, 4vw, 64px);
+  box-sizing: border-box;
+}
+
+@media (max-width: 989px) {
+  .bakata-products__inner {
+    padding-inline: 24px;
+  }
+}
+
+@media (max-width: 749px) {
+  .bakata-products__inner {
+    padding-inline: 18px;
+  }
+
+  .bakata-products__rail {
+    margin-right: 0;
+    padding-right: 18px;
+  }
+}
