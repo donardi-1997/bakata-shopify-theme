@@ -307,7 +307,7 @@
               "type": "text",
               "name": "Bakatá - confianza",
               "settings": {
-                "text": "<p>Compra clara · soporte en Colombia · políticas visibles antes de pagar</p>",
+                "text": "<p><strong>Pago contra entrega</strong><br>Elígelo en el checkout para pedidos elegibles en Colombia. Confirmaremos tus datos antes del despacho.</p>",
                 "width": "100%",
                 "max_width": "normal",
                 "alignment": "left",
